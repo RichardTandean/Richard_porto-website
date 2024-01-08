@@ -1,27 +1,957 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'PatuaOne';
+  src: url('/Font/PatuaOne.ttf') format('truetype');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+    font-family: 'Oswald';
+    src: url('/Font/Oswald.ttf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url('/Font/Teko-Bold.ttf') format('truetype');
+}
+
+/* Navbar CSS */
+
+.navLogo {
+    font-family: 'PatuaOne', sans-serif;
+    color: #E7F6F2;
+}
+
+.navbar {
+  background-color: #2C3333;
+}
+
+.navbar-nav .nav-item .nav-link.navMenu {
+  font-family: 'Oswald', sans-serif;
+  color: #E7F6F2;
+}
+
+.navbar-nav .nav-item .nav-link.navMenu:hover {
+  color: #51B7C7;
+}
+
+.navMenu:hover{
+  color: #51B7C7;
+}
+
+/* Landing Page CSS */
+
+#richard {
+  border-radius: 50%;
+  height: auto;
+  max-height: 400px;
+  border: 5px solid #51B7C7;
+  animation: fadeIn 2s alternate, ShadowAnim 2s 2s infinite alternate;
+  filter: drop-shadow(0px 0px 20px #51B7C7);
+}
+
+@keyframes fadeIn{
+  0% {
+    height: 0px;
+    border: 0px solid #51B7C7;
+    filter: drop-shadow(0px 0px 0px #51B7C7);
+  }
+  75% {
+    height: 400px;
+    border: 0px solid #51B7C7;
+    filter: drop-shadow(0px 0px 0px #51B7C7);
+  }
+  80%{
+    border: 5px solid #51B7C7;
+    filter: drop-shadow(0px 0px 0px #51B7C7);
+  }
+  100%{
+    filter: drop-shadow(0px 0px 20px #51B7C7);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes ShadowAnim{
+  0% {
+    filter: drop-shadow(0px 0px 20px #51B7C7);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 10px #51B7C7);
+  }
+}
+
+#hello {
+  font-family: 'PatuaOne';
+  color: #E7F6F2;
+  height: 48px;
+}
+
+#hello2 {
+  font-family: 'PatuaOne';
+  color: #51B7C7;
+  height: 38.4px;
+}
+
+#hello3 {
+  font-family: 'Oswald';
+  color: #E7F6F2;
+  height: 86.4px;
+}
+
+.home-container {
+  height: auto;
+}
+
+.home-row {
+  height: 714px;
+}
+
+.text-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 660px;
+
+}
+
+.richard {
+  width: 660px;
+  justify-content:end;
+  align-items:center;
+}
+
+.button-home{
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid #E7F6F2;
+  font-family: 'Oswald';
+  color: #E7F6F2;
+  height: 3.5rem;
+  width: 7rem;
+  font-size: 1.35rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-home:hover{
+  background-color: #51B7C7;
+  border: 1px solid #51B7C7;
+  color: #2C3333;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-home2{
+  border-radius: 10px;
+  border: 1px solid #E7F6F2;
+  font-family: 'Oswald';
+  color: #E7F6F2;
+  height: 3.5rem;
+  width: 7rem;
+  font-size: 1.35rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-home2:hover{
+  background-color: #51B7C7;
+  border: 1px solid #51B7C7;
+  color: #2C3333;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-div{
+  margin-top: 1rem;
+}
+
+/* Education CSS */
+
+.education-title {
+  font-family: 'PatuaOne';
+  color: #E7F6F2;
+  font-size: 4rem;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.edu-div {
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.school-card {
+  flex-direction: column;
+  max-width: 500px;
+  gap: 25px;
+  align-items: center;
+}
+
+.school-name {
+  font-family: 'PatuaOne';
+  color: #E7F6F2;
+  height: auto;
+  width: max-content;
+  font-size: 2rem;
+}
+
+#logo-sk {
+  max-width: 40%;
+  border-radius:150px;
+}
+
+.card {
+  background-color: #51B7C7;
+  max-width: 35rem;
+  border: 2px solid #51B7C7;
+  overflow: hidden;
+}
+
+.card-body{
+  font-family: 'Oswald', sans-serif;
+  color: #2C3333;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  background: linear-gradient(180deg, rgba(81,183,199,1) 21%, rgba(255,255,255,0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  transform: translateY(87%);
+  transition: transform 1s, border-radius 1s ;
+}
+
+.card-body:hover{
+  background: linear-gradient(180deg, rgba(81,183,199,0.9) 21%, rgba(255,255,255,0.7) 100%);
+  transform: translateY(0%);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card-text {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.card-img-top {
+  transition: opacity 0.3s;
+}
+
+.card-us-hovered {
+  background-color: white;
+  border-radius: 0px 0px 25px 25px;
+  cursor: pointer;
+}
+
+.card-umn-hovered {
+  background-color: white;
+  border-radius: 0px 0px 25px 25px;
+  cursor: pointer;
+}
+
+.card-desc {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+/* Experience CSS */
+
+.experience-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-title {
+  font-family: 'PatuaOne';
+  color: #E7F6F2;
+  font-size: 4rem;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.carousel-menu, .carousel-menu2{
+  font-family: 'PatuaOne';
+  color: white;
+  margin-left: 2vw;
+  font-size: 28px ;
+  flex-direction: column;
+}
+
+.carousel-menu:hover, .carousel-menu2:hover {
+  font-family: 'PatuaOne';
+  cursor: pointer;
+}
+
+#menu1:hover ,#menu2:hover, #menu3:hover, 
+#menu4:hover, #menu5:hover, #menu6:hover{
+  color: #51B7C7;
+}
+
+.box-div{
+  display: flex;
+  justify-content: end;
+}
+
+.menu-div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body #logo {
+  height: 100%;
+  transform: translateX(0%);
+}
+
+body .logo-animation {
+  animation: logoSlideRight 1.5s forwards;
+}
+
+@keyframes logoSlideRight {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-350%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+body #logo-desc {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0%);
+  font-family: 'Oswald';
+  font-size: 24px;
+  flex-direction: column;
+}
+
+body .desc-animation {
+  animation: descFadeIn 1.5s forwards;
+}
+
+@keyframes descFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.box-logo{
+  transition: background-color 1.5s ease-in-out;
+  border-radius: 50px 200px 200px 50px;
+  overflow: hidden;
+  height: 280px;
+  width: 900px;
+}
+
+.logo-desc {
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 100%;
+}
+
+.swiper {
+  width: 1160px;
+  height: 653px;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-button-next {
+  color: red;
+}
+
+.swiper-div {
+  margin-top: 40px;
+}
+
+#logo {
+  max-width:280px;
+  height: auto;
+  width:  auto;
+  max-height: 280px;
+}
+
+/* contact me CSS */
+
+.contact-div{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-body {
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+  height: 600px;
+}
+
+.contact-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-img {
+  max-height: 40px;
+}
+
+.contact-name {
+  font-size: 26px;
+  font-family: 'Oswald';
+  color: #E7F6F2;
+  align-items: center;
+}
+
+.contact-me {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.form-title {
+  justify-content: center;
+  align-self: start;
+  font-family: 'PatuaOne';
+  color: #E7F6F2;
+  font-size: 36px;
+}
+
+.contact-form {
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+.form {
+  width: 500px;
+}
+
+.label {
+  color: #E7F6F2;
+  margin-bottom: 10px;
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.form-control:focus {
+  color: #2C3333;
+}
+
+.button-submit{
+  border-radius: 10px;
+  border: 2px solid #51B7C7;
+  background-color: #51B7C7;
+  font-family: 'Oswald';
+  color: #2C3333;
+  height: 3.5rem;
+  width: 7rem;
+  font-size: 1.35rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.button-submit:hover{
+  background-color: #2C3333;
+  border: 2px solid #51B7C7;
+  color: #51B7C7;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.msg-sent {
+  color: #2C3333;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: 'Oswald';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid rgb(2, 194, 2);
+  background-color: rgb(2, 194, 2);
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1400px) {
+  #hello3 {
+    height: auto;
+  }
+
+  .school-card {
+    max-width: 450px;
+  }
+
+  .card-text {
+    font-size: 24px;
+  }
+
+  .card-body {
+    transform: translateY(86%);
+  }
+
+  .box-logo {
+    width: 800px;
+  }
+
+  .swiper {
+    width: 1055px;
+    height: 593px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #hello3{
+    height: 115px;
+  }
+
+  .education-title, .experience-title{
+    font-size: 52px;
+  }
+
+  .school-name{
+    font-size: 30px;
+  }
+
+  .school-card {
+    max-width: 400px;
+  }
+
+  .box-logo {
+    width: 715px;
+  }
+
+  .card-body {
+    transform: translateY(86%);
+  }
+
+  .card-text {
+    font-size: 22px;
+  }
+
+  .card-body {
+    transform: translateY(85%);
+  }
+
+  .swiper {
+    width: 936px;
+    height: 526px;
+  }
+
+  .carousel-menu {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  #richard{
+    max-height: 300px;
+  }
+
+  #hello {
+    height: 36px;
+    font-size: 32px;
+  }
+
+  #hello3 {
+    height: 160px;
+    width: 310px;
+  }
+
+  .education-title, .experience-title{
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+
+  .edu-div {
+    gap: 30px;
+  }
+  .school-card {
+    gap: 10px;
+  }
+
+  .card-text {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center ;
+  }
+
+  .school-name{
+    font-size: 20px;
+  }
+
+  .school-card {
+    max-width: 320px;
+  }
+
+  .box-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-div {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .box-logo {
+    height: 230px;
+    width: 650px;
+  }
+
+  .experience-div {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .carousel-menu{
+    flex-direction: column;
+    gap: 0px;
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .card-body {
+    transform: translateY(85%);
+  }
+
+  .card-text {
+    font-size: 20px;
+  }
+
+  .card-body {
+    transform: translateY(83%);
+  }
+
+  .swiper {
+    width: 650px;
+    height: 365px;
+  }
+
+  .contact-body {
+    height: 800px;
+    flex-direction: column;
+  }
+  
+  .form-title {
+    width: 100%;
+    align-items: center;
+  }
+
+  .contact-form {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-row {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .text-home {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 516px;
+  }
+
+  .richard {
+    width: 516px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  #hello {
+    font-size: 40px;
+    height: 45px;
+  }
+
+  #hello2 {
+    font-size: 30px;
+  }
+
+  #hello3 {
+    width: 420px;
+    text-align: center;
+    height: 110px;
+  }
+
+  #richard {
+    max-height: 360px;
+  }
+
+  .edu-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-title, .experience-title{
+    font-size: 50px;
+  }
+
+  .school-card{
+    max-width: 400px;
+  }
+
+  .school-name {
+    font-size: 28px;
+  }
+
+  .card-text {
+    font-size: 20px;
+  }
+
+  .card-body {
+    transform: translateY(86%);
+  }
+  
+  .box-logo {
+    width: 500px;
+    height: 180px;
+  }
+
+  .swiper {
+    width: 500px;
+    height: 281px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-row{
+    align-items: center ;
+  }
+}
+
+@media (max-width: 525px) {
+  .navbar-container{
+    max-width: 100%;
+  }
+  .home-row {
+    max-width: 100%;
+  }
+
+  .text-home {
+    max-width: 100%;
+  }
+
+  #hello {
+    font-size: 35px;
+    height: 36px;
+  }
+
+  #hello2 {
+    font-size: 28px;
+    height: 30px;
+  }
+
+  #hello3 {
+    font-size: 20px;
+    width: 380px;
+    height: auto;
+  }
+
+  #richard {
+    max-height: 300px;
+  }
+
+  .richard{
+    width: 320px;
+  }
+
+  .education-title, .experience-title{
+    font-size: 42px;
+  }
+
+  .school-card{
+    max-width: 320px;
+  }
+
+  .school-name {
+    font-size: 24px;
+  }
+
+  .card-text {
+    font-size: 18px;
+  }
+
+  .box-logo {
+    height: 500px;
+    width: 320px;
+    flex-direction: column-reverse;
+    border-radius: 50px;
+    padding: 20px;
+  }
+
+  #logo {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .menu-div {
+    flex-direction: column;
+    gap: 0px;
+    text-align: center;
+  }
+
+  .carousel-menu {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .card-body {
+    transform: translateY(84%);
+  }
+
+  .swiper {
+    width: 350px;
+    height: 197px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-container{
+    max-width: 100%;
+  }
+  .home-row {
+    max-width: 100%;
+  }
+
+  .text-home {
+    max-width: 100%;
+  }
+
+  #hello {
+    font-size: 24px;
+    height: 25px;
+  }
+
+  #hello2 {
+    font-size: 20px;
+    height: 24px;
+  }
+
+  #hello3 {
+    font-size: 18px;
+    width: 270px;
+  }
+
+  .button-home, .button-home2 {
+    font-size: 18px;
+    height: 50px;
+    width: 90px;
+  }
+
+  #richard {
+    max-height: 200px;
+  }
+
+  .richard{
+    width: 320px;
+  }
+
+  .education-title, .experience-title{
+    font-size: 36px;
+  }
+
+  .school-card{
+    max-width: 280px;
+    gap: 5px;
+  }
+
+  .school-name {
+    font-size: 20px;
+  }
+
+  .box-logo {
+    height: 450px;
+    width: 280px;
+    flex-direction: column-reverse;
+    border-radius: 25px;
+    padding: 20px;
+  }
+
+  #logo {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .menu-div {
+    flex-direction: column;
+    gap: 0px;
+    text-align: center;
+  }
+
+  .carousel-menu {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .card-body {
+    transform: translateY(82%);
+  }
+
+  .swiper {
+    width: 340px;
+    height: 187px;
+  }
 }
